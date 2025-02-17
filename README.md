@@ -16,7 +16,7 @@ This API server runs smoothly and with minimal to no latency on a **standart fre
 
 ### The easy way
 If you are only interested in using the API as fast as possible, you can clone the already existing Huggingface space of mine.<br>
-This will setup the whole API for you but you need to **change the space URL** in the Dockerfile, then you can skip to the Usage part.
+This will setup the whole API for you but you need to [**change the space URL**](#spacesurl) in the Dockerfile, then you can skip to the Usage part.
 
 [clone the Huggingface space here](https://huggingface.co/spaces/DrDemon/Vosk-EN)
 
@@ -38,7 +38,7 @@ RUN pip install --no-cache-dir websockets vosk
 CMD ["python3", "/opt/vosk-server/websocket/asr_server.py", "/opt/vosk-model-de/model", "--allow-websocket-origin", "{YOUR SPACE URL}"]
 ```
 **NOTE: you need to fill in your spaces url in the defined placeholder!** <br>
-
+<a id="spacesurl"></a>
 Your spaces open url is constructed as follows:
 - take your Huggingface username (eg. "drdemon")
 - take your spaces name as in the url (eg. "DrDemon/Vosk-EN")
